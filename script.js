@@ -51,26 +51,38 @@ console.log(user.lastName);
 
 // 5. Calculate the user's age and log it to the console.
 
-user.age = 2020 - birthYear;
-console.log(user.age);
+calculateAge();
+
+function calculateAge() {
+    let currentYear = 2020;
+    user.birthYear = birthYear;
+    user.age = currentYear - user.birthYear;
+    console.log(user.age);
+    alert(`${user.firstName}, your age in ${currentYear} is ${user.age}.`);
+}
 
 // 6. Extract the comma separated list of favorite foods and store it into an array in the object.
 
-
-console.log(user.favoriteFoods);
+user.favFoods = favFoods.split(", ");
+console.log(user.favFoods);
 
 // 7. Loop through the array to log the messages "I love [food]" for each item in the array.
 
 
 
+
 // 8. If the user has a pet, log a positive message, otherwise tell them they should get one.
 
-user.hasPet = hasPet;
-console.log(hasPet);
-if (hasPet = true) {
-    console.log(`That's great, ${user.firstName}! Pets bring a lot of joy to people's lives, as I'm sure you know.`);
-} else {
-    console.log(`${user.firstName}, I'm sorry to hear that you don't have any pets. I strongly encourage you to consider adopting a pet, you won't regret it!`);
+displayPetMessage();
+
+function displayPetMessage() {
+    user.hasPet = hasPet;
+    console.log(hasPet);
+    if (hasPet = true) {
+        alert(`It's great that you're a pet owner, ${user.firstName}! As I'm sure you already know, pets bring a lot of joy to people's lives and make wonderful companions.`);
+    } else {
+        alert(`${user.firstName}, I'm sorry to hear that you don't have any pets. I strongly encourage you to consider adopting a pet, you won't regret it!`);
+    }
 }
 
 // 9. Log the object to the console. Note to not include anything else when logging: `console.log(object);`
