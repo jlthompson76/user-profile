@@ -21,7 +21,6 @@ console.log(favFoods);
 
 hasPet = prompt('Do you have a pet (or pets)? Please enter yes or no');
 hasPet = hasPet.toLowerCase;
-console.log(hasPet);
 
 if (hasPet = "yes") {
     hasPet = true;
@@ -68,8 +67,13 @@ console.log(user.favFoods);
 
 // 7. Loop through the array to log the messages "I love [food]" for each item in the array.
 
+iLoveFood();
 
-
+function iLoveFood() {
+    for (const el of user.favFoods) {
+        console.log(`I love ${el}!`);
+    }
+}
 
 // 8. If the user has a pet, log a positive message, otherwise tell them they should get one.
 
@@ -79,7 +83,7 @@ function displayPetMessage() {
     user.hasPet = hasPet;
     console.log(hasPet);
     if (hasPet = true) {
-        alert(`It's great that you're a pet owner, ${user.firstName}! As I'm sure you already know, pets bring a lot of joy to people's lives and make wonderful companions.`);
+        alert(`It's great that you're a pet owner, ${user.firstName}! As I'm sure you already know, pets bring a lot of joy to our lives and make wonderful companions!`);
     } else {
         alert(`${user.firstName}, I'm sorry to hear that you don't have any pets. I strongly encourage you to consider adopting a pet, you won't regret it!`);
     }
